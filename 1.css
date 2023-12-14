@@ -1,0 +1,18 @@
+body{
+    background-image: url();
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.titulo{
+    border: 3px;
+    text-align: center;
+    background-color: aliceblue;
+}
+.cuadro{
+    border: 3px;
+    text-align: center;
+    height: 300px;
+    padding-top: 100px;
+
+}
+
