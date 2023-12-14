@@ -1,5 +1,5 @@
 body{
-    background-image: url();
+    background-image: url(https://i.pinimg.com/564x/1a/69/73/1a69730e5c7e206b7f2164c85b10ff98.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -9,7 +9,7 @@ body{
     background-color: rgb(69, 157, 235);
 }
 .cuadro{
-    background-color: blueviolet;
+    color: white;
     border: 3px;
     text-align: center;
     height: 300px;
