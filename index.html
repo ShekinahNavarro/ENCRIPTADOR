@@ -13,13 +13,15 @@
     <main class="cuadro">
         <section>
             <p>Mensaje secreto </p>
-            <textarea cols="100" rows="10" maxlength="300" placeholder="ingrese el texto aqui"></textarea>
-            <div>
-                <p>algo mas</p>
-            </div>
+            <label for="inputText">Texto:</label>
+            <input type="text" id="inputText">
             <div>
                 <button onclick="encrypt()">Encriptar</button>
                 <button onclick="decrypt()">Desencriptar</button>
+            </div>
+            <div>
+                <label for="result">Resultado:</label>
+                <input type="text" id="result">
             </div>
         </section>
     </main>
