@@ -1,3 +1,32 @@
+let esBinario = false;
+
+function cambiarTituloABinario() {
+    let titulo = document.querySelector('.titulo h1');
+    let textoOriginal = titulo.getAttribute('data-original-text');
+    let textoBinario = '';
+
+    if (!esBinario) {
+        // Almacena el texto original en un atributo de datos
+        titulo.setAttribute('data-original-text', textoOriginal);
+
+        // Convierte cada carácter a su representación binaria
+        for (let i = 0; i < textoOriginal.length; i++) {
+            let charCode = textoOriginal.charCodeAt(i);
+            let binaryRepresentation = charCode.toString(2).padStart(8, '0');
+            textoBinario += binaryRepresentation + ' ';
+        }
+
+        esBinario = true;
+    } else {
+        // Restaura el texto original desde el atributo de datos
+        textoBinario = titulo.getAttribute('data-original-text');
+        esBinario = false;
+    }
+
+    // Actualiza el contenido del título
+    titulo.innerText = textoBinario.trim();
+}
+
 function encrypt() {
     let inputText = document.getElementById('inputText').value;
     let encriptarText = '';
@@ -11,7 +40,7 @@ function encrypt() {
             encriptarText += inputText.charAt(i);
         }
     }
-    document.getElementById('result').value = encryptedText;
+    document.getElementById('result').value = encriptarText; 
 }
 
 function decrypt() {
@@ -29,3 +58,22 @@ function decrypt() {
     }
     document.getElementById('result').value = desencriptarText;
 }
+
+function copyToClipboard() {
+    /* Obtén el campo de resultado */
+    let resultadoFinal = document.getElementById('result');
+
+    /* Selecciona el contenido del campo de resultado */
+    resultadoFinal.select();
+    resultadoFinal.setSelectionRange(0, 99999); /* Para dispositivos móviles */
+
+    /* Copia el contenido al portapapeles */
+    document.execCommand('copy');
+
+    /* Deselecciona el campo */
+    resultadoFinal.setSelectionRange(0, 0);
+
+    /* Puedes agregar una alerta u otro tipo de feedback si lo deseas */
+    alert('Texto copiado al portapapeles');
+}
+

@@ -3,28 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encriptador</title>
-    <link rel="stylesheet" href="1.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="titulo">
-        <h1>Encriptador</h1>
+        <h1 onclick="cambiarTituloABinario()" data-original-text="Encriptador">Encriptador</h1>
     </header>
-    <main class="cuadro">
-        <section>
-            <p>Mensaje secreto </p>
-            <label for="inputText">Texto:</label>
-            <input type="text" id="inputText">
+    <main>
+        <section class="cuadro">
+            <p> Aqui podras encriptar los mensajes que quieras.</p>
+            <div>
+                <label for="inputText">Mensaje secreto:</label>
+                <br>
+                <textarea id="inputText"></textarea>
+            </div>
+            <br>
             <div>
                 <button onclick="encrypt()">Encriptar</button>
                 <button onclick="decrypt()">Desencriptar</button>
             </div>
-            <div>
+            <br>
+            <div class="resultado">
                 <label for="result">Resultado:</label>
-                <input type="text" id="result">
+                <br>
+                <textarea id="result"></textarea>
+                <br>
+                <button onclick="copyToClipboard()">Copiar</button>
             </div>
         </section>
     </main>
     <script src="1.js"></script>
 </body>
 </html>
+
