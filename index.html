@@ -13,13 +13,13 @@
     <main>
         <section class="cuadro">
             <p> Aqui podras encriptar los mensajes que quieras.</p>
-            <div>
+            <div class="texto">
                 <label for="inputText">Mensaje secreto:</label>
                 <br>
-                <textarea id="inputText"></textarea>
+                <textarea class="cuadro1" id="inputText"></textarea>
             </div>
             <br>
-            <div>
+            <div class="contenedor1">
                 <button onclick="encrypt()">Encriptar</button>
                 <button onclick="decrypt()">Desencriptar</button>
             </div>
@@ -27,9 +27,9 @@
             <div class="resultado">
                 <label for="result">Resultado:</label>
                 <br>
-                <textarea id="result"></textarea>
+                <textarea class="cuadro2" id="result"></textarea>
                 <br>
-                <button onclick="copyToClipboard()">Copiar</button>
+                <button class="contenedor2" onclick="copyToClipboard()">Copiar</button>
             </div>
         </section>
     </main>
