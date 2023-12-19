@@ -47,9 +47,9 @@ function encrypt() {
     for (let i = 0; i < inputText.length; i++) {
         let ascii = inputText.charCodeAt(i);
         if (ascii >= 65 && ascii <= 90) {
-            encriptarText += String.fromCharCode((ascii - 65 + 3) % 26 + 65);
+            encriptarText += String.fromCharCode((ascii - 65 + desplazamiento) % 26 + 65);
         } else if (ascii >= 97 && ascii <= 122) {
-            encriptarText += String.fromCharCode((ascii - 97 + 3) % 26 + 97);
+            encriptarText += String.fromCharCode((ascii - 97 + desplazamiento) % 26 + 97);
         } else {
             encriptarText += inputText.charAt(i);
         }
