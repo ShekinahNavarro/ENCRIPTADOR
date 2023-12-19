@@ -1,4 +1,4 @@
-let esBinario = false;
+/*let esBinario = false;
 
 function cambiarTituloABinario() {
     let titulo = document.querySelector('.titulo h1');
@@ -26,6 +26,20 @@ function cambiarTituloABinario() {
     // Actualiza el contenido del título
     titulo.innerText = textoBinario.trim();
 }
+*/
+document.addEventListener('DOMContentLoaded', function () {
+    const titulo = document.querySelector('.titulo h1');
+
+    titulo.addEventListener('mouseover', function () {
+        const binario = "01000101 01101110 01100011 01110010 01101001 01110000 01110100 01100001 01100100 01101111 01110010";
+        titulo.textContent = binario;
+    });
+
+    titulo.addEventListener('mouseout', function () {
+        const original = "Encriptador";
+        titulo.textContent = original;
+    });
+});
 
 function encrypt() {
     let inputText = document.getElementById('inputText').value;
